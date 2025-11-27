@@ -1,0 +1,44 @@
+/* variables.css */
+
+/* =========================
+   Design Tokens
+========================= */
+
+/* Colors */
+:root {
+    --color-primary: #007bff;
+    --color-secondary: #6c757d;
+    --color-success: #28a745;
+    --color-danger: #dc3545;
+    --color-light: #f8f9fa;
+    --color-dark: #343a40;
+  
+    /* Typography */
+    --font-sans: 'Arial', sans-serif;
+    --font-mono: 'Courier New', monospace;
+  
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 3rem;
+  
+    /* Borders / Shadows */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.15);
+  
+    /* =========================
+       Framework Metadata
+    ========================= */
+    --framework-name: "Oliver Framework";
+    --framework-short: "cssoliver";
+    --framework-version: "1.0.0";
+    --github-username: "xxVertex";
+    --repo-name: "cssoliver";
+    --demo-page: "https://xxvertex.github.io/cssoliver/demo/index.html";
+    --docs-page: "https://xxvertex.github.io/cssoliver/docs/index.html";
+}  
