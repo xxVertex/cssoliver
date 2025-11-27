@@ -1,9 +1,9 @@
 # Oliver Framework (cssoliver)
 
+[![Version](https://img.shields.io/github/v/release/xxVertex/oliver-css)](https://github.com/xxVertex/cssoliver/releases)
+[![GitHub stars](https://img.shields.io/github/stars/xxVertex/oliver-css)](https://github.com/xxVertex/cssoliver/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/xxVertex/oliver-css)](https://github.com/xxVertex/cssoliver/network)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/xxVertex/cssoliver)](https://github.com/xxVertex/cssoliver/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/xxVertex/cssoliver)](https://github.com/xxVertex/cssoliver/network)
-[![Version](https://img.shields.io/github/v/release/xxVertex/cssoliver)](https://github.com/xxVertex/cssoliver/releases)
 
 **Oliver Framework** (`cssoliver`) is a **lightweight, fully-featured CSS framework** designed for rapid web development and learning. It provides **modular utilities, responsive layouts, pre-built components, and customizable variables**, making it suitable for both beginners and professional developers.
 
