@@ -1,0 +1,153 @@
+/* =========================================================
+    Oliver CSS Framework - Cards Module
+    Card container, header, body, footer, shadows, colors,
+    spacing, images, hover effects, rounded variants.
+    ========================================================= */
+
+/* ===========================
+    CARD CONTAINER
+    =========================== */
+.card {
+    background-color: var(--body-bg, #fff);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s var(--ani-ease, ease);
+    margin-bottom: var(--space-3, 1rem);
+}
+
+/* Card hover shadow */
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* ===========================
+    CARD HEADER
+    =========================== */
+.card-header {
+    padding: var(--space-3, 1rem);
+    font-weight: 600;
+    border-bottom: 1px solid var(--gray-200);
+    background-color: var(--gray-150);
+}
+
+/* ===========================
+    CARD BODY
+    =========================== */
+.card-body {
+    padding: var(--space-3, 1rem);
+    flex: 1 1 auto;
+}
+
+/* ===========================
+    CARD FOOTER
+    =========================== */
+.card-footer {
+    padding: var(--space-3, 1rem);
+    border-top: 1px solid var(--gray-200);
+    background-color: var(--gray-150);
+    text-align: right;
+}
+
+/* ===========================
+    CARD VARIANTS
+    =========================== */
+.card-primary { border-color: var(--primary-color); background-color: #e7f0ff; }
+.card-secondary { border-color: var(--secondary-color); background-color: #f0f0f0; }
+.card-success { border-color: var(--success-color); background-color: #e6f4ea; }
+.card-danger { border-color: var(--danger-color); background-color: #fde8e8; }
+.card-warning { border-color: var(--warning-color); background-color: #fff4e5; }
+.card-info { border-color: var(--info-color); background-color: #e5f4fa; }
+.card-light { border-color: var(--gray-300); background-color: var(--light-color); }
+.card-dark { border-color: var(--dark-color); background-color: #333; color: #fff; }
+
+/* ===========================
+    ROUNDED CARDS
+    =========================== */
+.card-rounded { border-radius: var(--radius-lg); }
+
+/* ===========================
+    SHADOWED CARDS
+    =========================== */
+.card-shadow-sm { box-shadow: var(--shadow-sm); }
+.card-shadow-md { box-shadow: var(--shadow-md); }
+.card-shadow-lg { box-shadow: var(--shadow-lg); }
+.card-shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* ===========================
+    IMAGE CARDS
+    =========================== */
+.card-img-top {
+    width: 100%;
+    border-bottom: 1px solid var(--gray-200);
+    display: block;
+}
+
+.card-img-bottom {
+    width: 100%;
+    border-top: 1px solid var(--gray-200);
+    display: block;
+}
+
+/* Overlay text on card images */
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: var(--space-3, 1rem);
+    color: #fff;
+}
+
+/* ===========================
+    CARD LAYOUTS
+    =========================== */
+.card-horizontal {
+    flex-direction: row;
+}
+
+.card-horizontal .card-img-top, .card-horizontal .card-img-bottom {
+    width: auto;
+    height: 100%;
+    border: none;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3, 1rem);
+}
+
+.card-deck .card {
+    flex: 1 1 300px;
+}
+
+/* ===========================
+    CARD UTILITIES
+    =========================== */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-left { text-align: left !important; }
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: var(--space-1, 0.25rem) !important; }
+.mb-2 { margin-bottom: var(--space-2, 0.5rem) !important; }
+.mb-3 { margin-bottom: var(--space-3, 1rem) !important; }
+.mb-4 { margin-bottom: var(--space-4, 1.5rem) !important; }
+
+.p-0 { padding: 0 !important; }
+.p-1 { padding: var(--space-1, 0.25rem) !important; }
+.p-2 { padding: var(--space-2, 0.5rem) !important; }
+.p-3 { padding: var(--space-3, 1rem) !important; }
+.p-4 { padding: var(--space-4, 1.5rem) !important; }
+
+/* ===========================
+    CARD TRANSITIONS
+    =========================== */
+.card, .card-header, .card-footer {
+    transition: all 0.3s var(--ani-ease, ease);
+}

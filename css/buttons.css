@@ -1,0 +1,112 @@
+/* =========================================================
+    Oliver CSS Framework - Buttons Module
+    Styles for buttons: base, sizes, variants, outline,
+    states, shapes, and icon buttons.
+    ========================================================= */
+
+/* ===========================
+    BASE BUTTON
+    =========================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: var(--btn-font-size, 1rem);
+    font-weight: 500;
+    line-height: 1.2;
+    padding: var(--btn-padding-y, 0.65rem) var(--btn-padding-x, 1rem);
+    border-radius: var(--btn-border-radius, 6px);
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+/* ===========================
+    BUTTON VARIANTS
+    =========================== */
+.btn-primary { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+.btn-secondary { background-color: var(--secondary-color); color: #fff; border-color: var(--secondary-color); }
+.btn-success { background-color: var(--success-color); color: #fff; border-color: var(--success-color); }
+.btn-danger { background-color: var(--danger-color); color: #fff; border-color: var(--danger-color); }
+.btn-warning { background-color: var(--warning-color); color: #212529; border-color: var(--warning-color); }
+.btn-info { background-color: var(--info-color); color: #fff; border-color: var(--info-color); }
+.btn-light { background-color: var(--light-color); color: #212529; border-color: var(--gray-300); }
+.btn-dark { background-color: var(--dark-color); color: #fff; border-color: var(--dark-color); }
+
+/* ===========================
+    OUTLINE BUTTONS
+    =========================== */
+.btn-outline-primary { background: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); }
+.btn-outline-secondary { background: transparent; color: var(--secondary-color); border: 1px solid var(--secondary-color); }
+.btn-outline-success { background: transparent; color: var(--success-color); border: 1px solid var(--success-color); }
+.btn-outline-danger { background: transparent; color: var(--danger-color); border: 1px solid var(--danger-color); }
+.btn-outline-warning { background: transparent; color: var(--warning-color); border: 1px solid var(--warning-color); }
+.btn-outline-info { background: transparent; color: var(--info-color); border: 1px solid var(--info-color); }
+.btn-outline-light { background: transparent; color: var(--light-color); border: 1px solid var(--gray-300); }
+.btn-outline-dark { background: transparent; color: var(--dark-color); border: 1px solid var(--dark-color); }
+
+/* ===========================
+    BUTTON SIZES
+    =========================== */
+.btn-sm { font-size: 0.875rem; padding: 0.4rem 0.8rem; }
+.btn-md { font-size: 1rem; padding: 0.65rem 1rem; }
+.btn-lg { font-size: 1.25rem; padding: 0.85rem 1.5rem; }
+
+/* ===========================
+    STATES
+    =========================== */
+.btn:hover { opacity: 0.9; }
+.btn:focus { outline: 2px solid var(--primary-color); outline-offset: 2px; }
+.btn:active { transform: translateY(1px); opacity: 0.8; }
+.btn:disabled, .btn[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ===========================
+    BUTTON SHAPES
+    =========================== */
+.btn-rounded { border-radius: var(--radius-lg); }
+.btn-pill { border-radius: 50px; }
+
+/* Block buttons (full width) */
+.btn-block { display: flex; width: 100%; }
+
+/* ===========================
+    ICON BUTTONS
+    =========================== */
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* ===========================
+    GROUPED BUTTONS
+    =========================== */
+.btn-group {
+    display: inline-flex;
+}
+
+.btn-group .btn:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-group .btn:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: -1px;
+}
+
+/* ===========================
+    TRANSITIONS
+    =========================== */
+.btn {
+    transition: background-color 0.3s var(--ani-ease, ease), color 0.3s var(--ani-ease, ease), border-color 0.3s var(--ani-ease, ease), transform 0.1s var(--ani-ease, ease);
+}
