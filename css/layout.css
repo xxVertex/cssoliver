@@ -1,0 +1,229 @@
+/* =========================================================
+    Oliver CSS Framework - Layout Module
+    Handles container, grid, flexbox, spacing, and layout utilities
+    ========================================================= */
+
+/* =========================================
+    CONTAINER SYSTEM
+    ========================================= */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: var(--container-max-width, 1200px);
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* =========================================
+    GRID SYSTEM
+    ========================================= */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+}
+
+[class*="col"] {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex-grow: 1;
+}
+
+/* Basic columns */
+.col { flex: 1; }
+.col-auto { flex: 0 0 auto; width: auto; }
+
+.col-1 { width: 8.333%; }
+.col-2 { width: 16.666%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.333%; }
+.col-5 { width: 41.666%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.333%; }
+.col-8 { width: 66.666%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.333%; }
+.col-11 { width: 91.666%; }
+.col-12 { width: 100%; }
+
+/* Responsive columns */
+@media (min-width: 576px) {
+    .col-sm-6 { width: 50%; }
+    .col-sm-4 { width: 33.333%; }
+    .col-sm-3 { width: 25%; }
+    .col-sm-12 { width: 100%; }
+}
+
+@media (min-width: 768px) {
+    .col-md-6 { width: 50%; }
+    .col-md-4 { width: 33.333%; }
+    .col-md-3 { width: 25%; }
+    .col-md-12 { width: 100%; }
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 { width: 50%; }
+    .col-lg-4 { width: 33.333%; }
+    .col-lg-3 { width: 25%; }
+    .col-lg-12 { width: 100%; }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-6 { width: 50%; }
+    .col-xl-4 { width: 33.333%; }
+    .col-xl-3 { width: 25%; }
+    .col-xl-12 { width: 100%; }
+}
+
+/* =========================================
+    FLEX SYSTEM
+    ========================================= */
+
+.d-flex { display: flex !important; }
+.flex-row { flex-direction: row !important; }
+.flex-column { flex-direction: column !important; }
+
+/* Wrap */
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-nowrap { flex-wrap: nowrap !important; }
+
+/* Justify content */
+.justify-start { justify-content: flex-start !important; }
+.justify-center { justify-content: center !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+
+/* Align items */
+.align-start { align-items: flex-start !important; }
+.align-center { align-items: center !important; }
+.align-end { align-items: flex-end !important; }
+.align-stretch { align-items: stretch !important; }
+
+/* Align self */
+.self-start { align-self: flex-start !important; }
+.self-center { align-self: center !important; }
+.self-end { align-self: flex-end !important; }
+
+/* Gap utilities */
+.gap-0 { gap: 0 !important; }
+.gap-1 { gap: 0.25rem !important; }
+.gap-2 { gap: 0.5rem !important; }
+.gap-3 { gap: 1rem !important; }
+.gap-4 { gap: 1.5rem !important; }
+.gap-5 { gap: 2rem !important; }
+
+/* Order */
+.order-1 { order: 1 !important; }
+.order-2 { order: 2 !important; }
+.order-3 { order: 3 !important; }
+.order-first { order: -1 !important; }
+.order-last { order: 999 !important; }
+
+/* =========================================
+    SPACING SYSTEM (MARGIN + PADDING)
+    ========================================= */
+
+:root {
+    --space-0: 0;
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 3rem;
+}
+
+.m-0 { margin: var(--space-0) !important; }
+.m-1 { margin: var(--space-1) !important; }
+.m-2 { margin: var(--space-2) !important; }
+.m-3 { margin: var(--space-3) !important; }
+.m-4 { margin: var(--space-4) !important; }
+.m-5 { margin: var(--space-5) !important; }
+
+/* Margin top */
+.mt-1 { margin-top: var(--space-1) !important; }
+.mt-2 { margin-top: var(--space-2) !important; }
+.mt-3 { margin-top: var(--space-3) !important; }
+.mt-4 { margin-top: var(--space-4) !important; }
+
+/* Margin bottom */
+.mb-1 { margin-bottom: var(--space-1) !important; }
+.mb-2 { margin-bottom: var(--space-2) !important; }
+.mb-3 { margin-bottom: var(--space-3) !important; }
+.mb-4 { margin-bottom: var(--space-4) !important; }
+
+/* Margin left */
+.ml-1 { margin-left: var(--space-1) !important; }
+.ml-2 { margin-left: var(--space-2) !important; }
+.ml-3 { margin-left: var(--space-3) !important; }
+
+/* Margin right */
+.mr-1 { margin-right: var(--space-1) !important; }
+.mr-2 { margin-right: var(--space-2) !important; }
+.mr-3 { margin-right: var(--space-3) !important; }
+
+/* Padding */
+.p-1 { padding: var(--space-1) !important; }
+.p-2 { padding: var(--space-2) !important; }
+.p-3 { padding: var(--space-3) !important; }
+.p-4 { padding: var(--space-4) !important; }
+.p-5 { padding: var(--space-5) !important; }
+
+/* Padding directional */
+.pt-1 { padding-top: var(--space-1) !important; }
+.pb-1 { padding-bottom: var(--space-1) !important; }
+.pl-1 { padding-left: var(--space-1) !important; }
+.pr-1 { padding-right: var(--space-1) !important; }
+
+/* =========================================
+    ADVANCED LAYOUT HELPERS
+    ========================================= */
+
+.center-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.h-stack {
+    display: flex;
+    flex-direction: row;
+}
+
+.fill-parent {
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Hide/show */
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+
+/* Float helpers */
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.float-none { float: none !important; }
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}

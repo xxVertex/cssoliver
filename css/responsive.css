@@ -1,0 +1,247 @@
+/* =========================================================
+    Oliver CSS Framework - Responsive Module
+    Provides breakpoint-based responsive utilities for
+    display, text, layout, spacing, and flex/grid helpers
+    ========================================================= */
+
+/* ===========================
+    BREAKPOINT VARIABLES
+    =========================== */
+
+:root {
+    --breakpoint-xs: 0px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-xxl: 1400px;
+}
+
+/* ===========================
+    DISPLAY UTILITIES
+    =========================== */
+
+/* Mobile-first defaults (all visible by default) */
+.d-xs-none { display: none !important; }
+.d-xs-block { display: block !important; }
+.d-xs-inline { display: inline !important; }
+.d-xs-inline-block { display: inline-block !important; }
+.d-xs-flex { display: flex !important; }
+.d-xs-grid { display: grid !important; }
+
+/* Small screens >= 576px */
+@media (min-width: 576px) {
+    .d-sm-none { display: none !important; }
+    .d-sm-block { display: block !important; }
+    .d-sm-inline { display: inline !important; }
+    .d-sm-inline-block { display: inline-block !important; }
+    .d-sm-flex { display: flex !important; }
+    .d-sm-grid { display: grid !important; }
+}
+
+/* Medium screens >= 768px */
+@media (min-width: 768px) {
+    .d-md-none { display: none !important; }
+    .d-md-block { display: block !important; }
+    .d-md-inline { display: inline !important; }
+    .d-md-inline-block { display: inline-block !important; }
+    .d-md-flex { display: flex !important; }
+    .d-md-grid { display: grid !important; }
+}
+
+/* Large screens >= 992px */
+@media (min-width: 992px) {
+    .d-lg-none { display: none !important; }
+    .d-lg-block { display: block !important; }
+    .d-lg-inline { display: inline !important; }
+    .d-lg-inline-block { display: inline-block !important; }
+    .d-lg-flex { display: flex !important; }
+    .d-lg-grid { display: grid !important; }
+}
+
+/* Extra large screens >= 1200px */
+@media (min-width: 1200px) {
+    .d-xl-none { display: none !important; }
+    .d-xl-block { display: block !important; }
+    .d-xl-inline { display: inline !important; }
+    .d-xl-inline-block { display: inline-block !important; }
+    .d-xl-flex { display: flex !important; }
+    .d-xl-grid { display: grid !important; }
+}
+
+/* XXL screens >= 1400px */
+@media (min-width: 1400px) {
+    .d-xxl-none { display: none !important; }
+    .d-xxl-block { display: block !important; }
+    .d-xxl-inline { display: inline !important; }
+    .d-xxl-inline-block { display: inline-block !important; }
+    .d-xxl-flex { display: flex !important; }
+    .d-xxl-grid { display: grid !important; }
+}
+
+/* ===========================
+    TEXT UTILITIES
+    =========================== */
+
+/* Text alignment */
+.text-xs-start { text-align: left !important; }
+.text-xs-center { text-align: center !important; }
+.text-xs-end { text-align: right !important; }
+
+@media (min-width: 576px) {
+    .text-sm-start { text-align: left !important; }
+    .text-sm-center { text-align: center !important; }
+    .text-sm-end { text-align: right !important; }
+}
+
+@media (min-width: 768px) {
+    .text-md-start { text-align: left !important; }
+    .text-md-center { text-align: center !important; }
+    .text-md-end { text-align: right !important; }
+}
+
+@media (min-width: 992px) {
+    .text-lg-start { text-align: left !important; }
+    .text-lg-center { text-align: center !important; }
+    .text-lg-end { text-align: right !important; }
+}
+
+@media (min-width: 1200px) {
+    .text-xl-start { text-align: left !important; }
+    .text-xl-center { text-align: center !important; }
+    .text-xl-end { text-align: right !important; }
+}
+
+@media (min-width: 1400px) {
+    .text-xxl-start { text-align: left !important; }
+    .text-xxl-center { text-align: center !important; }
+    .text-xxl-end { text-align: right !important; }
+}
+
+/* ===========================
+    MARGIN & PADDING UTILITIES
+    =========================== */
+
+@media (min-width: 576px) {
+    .sm-m-0 { margin: 0 !important; }
+    .sm-m-1 { margin: 0.25rem !important; }
+    .sm-m-2 { margin: 0.5rem !important; }
+    .sm-m-3 { margin: 1rem !important; }
+    .sm-m-4 { margin: 1.5rem !important; }
+    .sm-p-0 { padding: 0 !important; }
+    .sm-p-1 { padding: 0.25rem !important; }
+    .sm-p-2 { padding: 0.5rem !important; }
+    .sm-p-3 { padding: 1rem !important; }
+    .sm-p-4 { padding: 1.5rem !important; }
+}
+
+@media (min-width: 768px) {
+    .md-m-0 { margin: 0 !important; }
+    .md-m-1 { margin: 0.25rem !important; }
+    .md-m-2 { margin: 0.5rem !important; }
+    .md-m-3 { margin: 1rem !important; }
+    .md-m-4 { margin: 1.5rem !important; }
+    .md-p-0 { padding: 0 !important; }
+    .md-p-1 { padding: 0.25rem !important; }
+    .md-p-2 { padding: 0.5rem !important; }
+    .md-p-3 { padding: 1rem !important; }
+    .md-p-4 { padding: 1.5rem !important; }
+}
+
+@media (min-width: 992px) {
+    .lg-m-0 { margin: 0 !important; }
+    .lg-m-1 { margin: 0.25rem !important; }
+    .lg-m-2 { margin: 0.5rem !important; }
+    .lg-m-3 { margin: 1rem !important; }
+    .lg-m-4 { margin: 1.5rem !important; }
+    .lg-p-0 { padding: 0 !important; }
+    .lg-p-1 { padding: 0.25rem !important; }
+    .lg-p-2 { padding: 0.5rem !important; }
+    .lg-p-3 { padding: 1rem !important; }
+    .lg-p-4 { padding: 1.5rem !important; }
+}
+
+@media (min-width: 1200px) {
+    .xl-m-0 { margin: 0 !important; }
+    .xl-m-1 { margin: 0.25rem !important; }
+    .xl-m-2 { margin: 0.5rem !important; }
+    .xl-m-3 { margin: 1rem !important; }
+    .xl-m-4 { margin: 1.5rem !important; }
+    .xl-p-0 { padding: 0 !important; }
+    .xl-p-1 { padding: 0.25rem !important; }
+    .xl-p-2 { padding: 0.5rem !important; }
+    .xl-p-3 { padding: 1rem !important; }
+    .xl-p-4 { padding: 1.5rem !important; }
+}
+
+@media (min-width: 1400px) {
+    .xxl-m-0 { margin: 0 !important; }
+    .xxl-m-1 { margin: 0.25rem !important; }
+    .xxl-m-2 { margin: 0.5rem !important; }
+    .xxl-m-3 { margin: 1rem !important; }
+    .xxl-m-4 { margin: 1.5rem !important; }
+    .xxl-p-0 { padding: 0 !important; }
+    .xxl-p-1 { padding: 0.25rem !important; }
+    .xxl-p-2 { padding: 0.5rem !important; }
+    .xxl-p-3 { padding: 1rem !important; }
+    .xxl-p-4 { padding: 1.5rem !important; }
+}
+
+/* ===========================
+    FLEX UTILITIES (responsive)
+    =========================== */
+
+@media (min-width: 576px) {
+    .sm-flex-row { flex-direction: row !important; }
+    .sm-flex-column { flex-direction: column !important; }
+    .sm-justify-start { justify-content: flex-start !important; }
+    .sm-justify-center { justify-content: center !important; }
+    .sm-justify-end { justify-content: flex-end !important; }
+    .sm-align-start { align-items: flex-start !important; }
+    .sm-align-center { align-items: center !important; }
+    .sm-align-end { align-items: flex-end !important; }
+}
+
+@media (min-width: 768px) {
+    .md-flex-row { flex-direction: row !important; }
+    .md-flex-column { flex-direction: column !important; }
+    .md-justify-start { justify-content: flex-start !important; }
+    .md-justify-center { justify-content: center !important; }
+    .md-justify-end { justify-content: flex-end !important; }
+    .md-align-start { align-items: flex-start !important; }
+    .md-align-center { align-items: center !important; }
+    .md-align-end { align-items: flex-end !important; }
+}
+
+@media (min-width: 992px) {
+    .lg-flex-row { flex-direction: row !important; }
+    .lg-flex-column { flex-direction: column !important; }
+    .lg-justify-start { justify-content: flex-start !important; }
+    .lg-justify-center { justify-content: center !important; }
+    .lg-justify-end { justify-content: flex-end !important; }
+    .lg-align-start { align-items: flex-start !important; }
+    .lg-align-center { align-items: center !important; }
+    .lg-align-end { align-items: flex-end !important; }
+}
+
+@media (min-width: 1200px) {
+    .xl-flex-row { flex-direction: row !important; }
+    .xl-flex-column { flex-direction: column !important; }
+    .xl-justify-start { justify-content: flex-start !important; }
+    .xl-justify-center { justify-content: center !important; }
+    .xl-justify-end { justify-content: flex-end !important; }
+    .xl-align-start { align-items: flex-start !important; }
+    .xl-align-center { align-items: center !important; }
+    .xl-align-end { align-items: flex-end !important; }
+}
+
+@media (min-width: 1400px) {
+    .xxl-flex-row { flex-direction: row !important; }
+    .xxl-flex-column { flex-direction: column !important; }
+    .xxl-justify-start { justify-content: flex-start !important; }
+    .xxl-justify-center { justify-content: center !important; }
+    .xxl-justify-end { justify-content: flex-end !important; }
+    .xxl-align-start { align-items: flex-start !important; }
+    .xxl-align-center { align-items: center !important; }
+    .xxl-align-end { align-items: flex-end !important; }
+}

@@ -1,0 +1,340 @@
+/* =========================================================
+    Oliver CSS Framework - Forms Module
+    Inputs, selects, textareas, checkboxes, radios, switches,
+    file upload, validation, input-groups, layout helpers.
+    ========================================================= */
+
+/* ------------------------------------------
+    GLOBAL FORM DEFAULTS
+    -------------------------------------------*/
+
+input, select, textarea, button {
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-color, #333);
+}
+
+form {
+    width: 100%;
+    display: block;
+}
+
+/* Form group wrapper */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: var(--text-color, #333);
+}
+
+/* ------------------------------------------
+    INPUT BASE STYLING
+    -------------------------------------------*/
+
+.input, textarea, select {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--gray-300, #dcdcdc);
+    border-radius: var(--radius-md, 6px);
+    background: var(--input-bg, #fff);
+    color: var(--text-color, #333);
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.input:focus, textarea:focus, select:focus {
+    border-color: var(--primary-color, #006cff);
+    box-shadow: 0 0 0 3px rgba(0, 108, 255, 0.25);
+}
+
+.input::placeholder, textarea::placeholder {
+    color: var(--gray-500, #999);
+}
+
+/* Disabled */
+.input:disabled, textarea:disabled, select:disabled {
+    background: var(--gray-200, #f0f0f0);
+    cursor: not-allowed;
+}
+
+/* Readonly */
+.input[readonly] {
+    background: var(--gray-150, #fafafa);
+    color: var(--gray-700, #555);
+}
+
+/* ------------------------------------------
+    TEXTAREA
+    -------------------------------------------*/
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Full height textarea */
+.textarea-lg { min-height: 200px; }
+
+/* ------------------------------------------
+    INPUT SIZES
+    -------------------------------------------*/
+
+.input-sm { padding: 0.45rem 0.65rem; font-size: 0.875rem; }
+.input-md { padding: 0.65rem 0.85rem; font-size: 1rem; }
+.input-lg { padding: 0.85rem 1rem; font-size: 1.125rem; }
+
+/* ------------------------------------------
+    VALIDATION STATES
+    -------------------------------------------*/
+
+.input-success {
+    border-color: var(--success-color, #28a745);
+}
+
+.input-success:focus {
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+}
+
+.input-warning {
+    border-color: var(--warning-color, #ffc107);
+}
+
+.input-warning:focus {
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.25);
+}
+
+.input-error {
+    border-color: var(--danger-color, #dc3545);
+}
+
+.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.25);
+}
+
+.form-feedback {
+    margin-top: 0.3rem;
+    font-size: 0.875rem;
+}
+
+.feedback-success { color: var(--success-color, #28a745); }
+.feedback-warning { color: var(--warning-color, #ffc107); }
+.feedback-error { color: var(--danger-color, #dc3545); }
+
+/* ------------------------------------------
+    CHECKBOX & RADIO (custom)
+    -------------------------------------------*/
+
+.checkbox, .radio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox input, .radio input {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--gray-400, #ccc);
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Checked checkbox */
+.checkbox input:checked {
+    background: var(--primary-color, #006cff);
+    border-color: var(--primary-color, #006cff);
+}
+
+.checkbox input:checked::after {
+    content: "✔";
+    position: absolute;
+    font-size: 12px;
+    color: white;
+    left: 2px;
+    top: -1px;
+}
+
+/* Radio */
+.radio input {
+    border-radius: 50%;
+}
+
+.radio input:checked {
+    border-color: var(--primary-color, #006cff);
+    background: var(--primary-color, #006cff);
+}
+
+.radio input:checked::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+}
+
+/* ------------------------------------------
+    SWITCH / TOGGLE
+    -------------------------------------------*/
+
+.switch {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    display: inline-block;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-slider {
+    position: absolute;
+    background: var(--gray-400, #ccc);
+    border-radius: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.switch-slider::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: 0.3s;
+}
+
+.switch input:checked + .switch-slider {
+    background: var(--primary-color, #006cff);
+}
+
+.switch input:checked + .switch-slider::before {
+    transform: translateX(24px);
+}
+
+/* ------------------------------------------
+    CUSTOM SELECT (simple)
+    -------------------------------------------*/
+
+.select {
+    appearance: none;
+    background: var(--input-bg, #fff)
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='7'><path fill='gray' d='M0 0l6 7 6-7'/></svg>") no-repeat right 0.8rem center;
+    background-size: 12px 7px;
+    padding-right: 2rem;
+}
+
+/* ------------------------------------------
+    FILE INPUT
+    -------------------------------------------*/
+
+.file-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--gray-300, #dcdcdc);
+    border-radius: var(--radius-md, 6px);
+    padding: 0.5rem;
+    background: var(--gray-100, #f8f8f8);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.file-input input[type="file"] {
+    display: none;
+}
+
+.file-input:hover {
+    background: var(--gray-200, #eee);
+}
+
+.file-name {
+    font-size: 0.95rem;
+    color: var(--text-color, #333);
+}
+
+/* ------------------------------------------
+    INPUT GROUPS
+    -------------------------------------------*/
+
+.input-group {
+    display: flex;
+    width: 100%;
+}
+
+.input-group .input {
+    flex: 1;
+    border-radius: 0;
+}
+
+.input-group-prepend, .input-group-append {
+    background: var(--gray-150, #f3f3f3);
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--gray-300, #dcdcdc);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    color: var(--gray-700, #555);
+}
+
+.input-group-prepend {
+    border-radius: var(--radius-md, 6px) 0 0 var(--radius-md, 6px);
+}
+
+.input-group-append {
+    border-radius: 0 var(--radius-md, 6px) var(--radius-md, 6px) 0;
+}
+
+/* ------------------------------------------
+    FORM LAYOUT HELPERS
+    -------------------------------------------*/
+
+.form-inline {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+/* ------------------------------------------
+    ERROR SHAKE ANIMATION
+    -------------------------------------------*/
+
+.input-error-shake {
+    animation: errorShake 0.3s ease;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    30% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+}

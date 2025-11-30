@@ -1,0 +1,219 @@
+/* =========================================================
+    Oliver CSS Framework - Base Module
+    Applies base element styling & global behavior
+    ========================================================= */
+
+/* Body defaults */
+body {
+    font-family: var(--font-family, "Inter", sans-serif);
+    color: var(--text-color, #222);
+    background-color: var(--body-bg, #ffffff);
+    font-size: var(--font-size-base, 16px);
+    line-height: var(--line-height-normal, 1.6);
+    letter-spacing: var(--letter-spacing-normal, 0.3px);
+    overflow-x: hidden;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--heading-weight, 700);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: var(--heading-color, #111);
+}
+
+h1 { font-size: var(--h1-size, 2.5rem); }
+h2 { font-size: var(--h2-size, 2rem); }
+h3 { font-size: var(--h3-size, 1.75rem); }
+h4 { font-size: var(--h4-size, 1.5rem); }
+h5 { font-size: var(--h5-size, 1.25rem); }
+h6 { font-size: var(--h6-size, 1rem); }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Strong & italics */
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Links */
+a {
+    color: var(--primary, #4a6cff);
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark, #3a56cc);
+    text-decoration: underline;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color, #ddd);
+    margin: 2rem 0;
+}
+
+/* Blockquote */
+blockquote {
+    border-left: 4px solid var(--primary, #4a6cff);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Lists */
+ul {
+    list-style: disc inside;
+    margin-bottom: 1rem;
+}
+
+ol {
+    list-style: decimal inside;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin: 0.25rem 0;
+}
+
+/* Code elements */
+code {
+    font-family: "Fira Code", monospace;
+    background: var(--code-bg, #f4f4f4);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+pre {
+    background: var(--code-bg, #f4f4f4);
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+/* Images */
+img {
+    border-radius: var(--img-radius, 4px);
+}
+
+/* Selection styling */
+::selection {
+    background: var(--primary, #4a6cff);
+    color: #fff;
+}
+
+/* =========================================================
+    Additional common base classes
+    ========================================================= */
+
+/* Text utilities */
+.text-muted { color: #777 !important; }
+.text-small { font-size: 0.875rem !important; }
+.text-large { font-size: 1.25rem !important; }
+.text-bold { font-weight: 700 !important; }
+.text-light { font-weight: 300 !important; }
+
+/* Alignment */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-left { text-align: left !important; }
+
+/* Width classes */
+.w-25 { width: 25% !important; }
+.w-50 { width: 50% !important; }
+.w-75 { width: 75% !important; }
+.w-100 { width: 100% !important; }
+.max-w-sm { max-width: 400px !important; }
+.max-w-md { max-width: 600px !important; }
+.max-w-lg { max-width: 900px !important; }
+
+/* Height classes */
+.h-25 { height: 25% !important; }
+.h-50 { height: 50% !important; }
+.h-75 { height: 75% !important; }
+.h-100 { height: 100% !important; }
+
+/* Rounded corners */
+.rounded-sm { border-radius: 4px !important; }
+.rounded { border-radius: 8px !important; }
+.rounded-lg { border-radius: 16px !important; }
+.rounded-full { border-radius: 999px !important; }
+
+/* Shadows */
+.shadow-sm {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.shadow {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2) !important;
+}
+
+/* Borders */
+.border {
+    border: 1px solid var(--border-color, #ddd) !important;
+}
+
+.border-0 { border: none !important; }
+
+.border-primary {
+    border-color: var(--primary, #4a6cff) !important;
+}
+
+/* Background helpers */
+.bg-white { background: #fff !important; }
+.bg-light { background: #f7f7f7 !important; }
+.bg-dark { background: #222 !important; color: #fff !important; }
+
+/* Text colors */
+.text-primary { color: var(--primary, #4a6cff) !important; }
+.text-danger { color: var(--danger, #d9534f) !important; }
+.text-success { color: var(--success, #28a745) !important; }
+.text-warning { color: var(--warning, #f0ad4e) !important; }
+
+/* Display classes */
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+.d-none { display: none !important; }
+
+/* Positioning */
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.position-fixed { position: fixed !important; }
+.position-sticky { position: sticky !important; }
+
+/* Z-Index */
+.z-1 { z-index: 1 !important; }
+.z-10 { z-index: 10 !important; }
+.z-100 { z-index: 100 !important; }
+.z-999 { z-index: 999 !important; }
+
+/* Opacity */
+.opacity-25 { opacity: 0.25 !important; }
+.opacity-50 { opacity: 0.50 !important; }
+.opacity-75 { opacity: 0.75 !important; }
+.opacity-100 { opacity: 1 !important; }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden !important; }
+.overflow-auto { overflow: auto !important; }
+.overflow-scroll { overflow: scroll !important; }
+
+/* Cursor */
+.cursor-pointer { cursor: pointer !important; }
+.cursor-default { cursor: default !important; }
+.cursor-not-allowed { cursor: not-allowed !important; }
+.cursor-text { cursor: text !important; }
