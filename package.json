@@ -1,23 +1,24 @@
 {
   "name": "cssoliver",
   "version": "1.0.0",
-  "description": "[![Version](https://img.shields.io/github/v/release/xxVertex/cssoliver](https://github.com/xxVertex/cssoliver/releases) [![GitHub stars](https://img.shields.io/github/stars/xxVertex/cssoliver)](https://github.com/xxVertex/cssoliver/stargazers) [![GitHub forks](https://img.shields.io/github/forks/xxVertex/cssoliver)](https://github.com/xxVertex/cssoliver/network) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)",
-  "main": "index.js",
+  "description": "Oliver CSS Framework — lightweight, modular, and fully-featured CSS framework",
+  "main": "dist/cssoliver.css",
   "scripts": {
     "build": "postcss css/framework.css -o dist/cssoliver.css",
-    "build:min": "postcss css/framework.css -o dist/cssoliver.min.css"
+    "build:min": "NODE_ENV=production postcss css/framework.css -o dist/cssoliver.min.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xxVertex/cssoliver.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["css", "framework", "responsive", "ui", "oliver-css"],
+  "author": "Oliver",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/xxVertex/cssoliver/issues"
   },
   "homepage": "https://github.com/xxVertex/cssoliver#readme",
+  "files": ["dist/"],
   "devDependencies": {
     "autoprefixer": "^10.4.22",
     "cssnano": "^7.1.2",
