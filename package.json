@@ -5,26 +5,36 @@
   "main": "dist/cssoliver.css",
   "scripts": {
     "build": "postcss css/framework.css -o dist/cssoliver.css",
-    "build:min": "NODE_ENV=production postcss css/framework.css -o dist/cssoliver.min.css"
+    "build:min": "NODE_ENV=production postcss css/framework.css -o dist/cssoliver.min.css",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xxVertex/cssoliver.git"
   },
-  "keywords": ["css", "framework", "responsive", "ui", "oliver-css"],
+  "keywords": [
+    "css",
+    "framework",
+    "responsive",
+    "ui",
+    "oliver-css"
+  ],
   "author": "Oliver",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xxVertex/cssoliver/issues"
   },
   "homepage": "https://github.com/xxVertex/cssoliver#readme",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "devDependencies": {
     "autoprefixer": "^10.4.22",
     "cssnano": "^7.1.2",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
-    "postcss-import": "^16.1.1"
+    "postcss-import": "^16.1.1",
+    "standard-version": "^9.5.0"
   },
   "watch": "postcss css/framework.css -o dist/cssoliver.css --watch"
 }
