@@ -212,6 +212,13 @@ Output goes to `/dist`.
 
 ---
 
+## 📚 Documentation
+Full documentation is available at:
+
+➡️ https://xxVertex.github.io/cssoliver
+
+---
+
 # 🤝 Contributing
 
 1. Fork the repository
